@@ -1,0 +1,12 @@
+<h1>Kitties for free!</h1>
+
+<app-user-kitten #appUserKitten></app-user-kitten>
+
+<app-create-kitten
+  (kittenAdded)="appListKitten.onKittenAdded($event)"
+></app-create-kitten>
+
+<app-list-kitten
+  [appUserKittenComponent]="appUserKitten"
+  #appListKitten
+></app-list-kitten>
